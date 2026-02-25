@@ -53,6 +53,9 @@ const fetchRocket = async () => {
   try {
     const id = route.params.id;
     const res = await fetch(`https://api.spacexdata.com/v4/rockets/${id}`);
+    if (!res.ok) {
+      throw new Error('Rocket not found');
+    }
     const data = await res.json();
     rocket.value = {
       id: data.id,

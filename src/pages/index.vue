@@ -51,7 +51,7 @@ const addRocket = () => {
 };
 
 const goToDetail = (rocket: any) => {
-  router.push({ name: 'rocket-detail', params: { id: rocket.id } });
+  router.push(`/rocket-detail/${rocket.id}`);
 };
 
 onMounted(fetchRockets);
@@ -66,7 +66,6 @@ onMounted(fetchRockets);
           label="Filter roket"
           prepend-inner-icon="mdi-filter"
           class="mb-4"
-          @input="() => {}"
           clearable
         />
       </v-col>
