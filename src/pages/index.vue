@@ -66,6 +66,8 @@ onMounted(fetchRockets);
           label="Filter roket"
           prepend-inner-icon="mdi-filter"
           class="mb-4"
+          @input="() => {}"
+          clearable
         />
       </v-col>
       <v-col cols="12" md="4">
